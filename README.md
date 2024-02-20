@@ -22,7 +22,7 @@ pyuic5 path/to/design.ui -o output/path/to/design.py
 ```
 pyinstaller --onefile main.py
 ```
-
+Папка с шаблонами должна располагаться рядом с exe файлом
 ## Работа с программой 
 
 <ul>
