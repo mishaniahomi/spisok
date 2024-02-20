@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1039</width>
+    <height>731</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Списки</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #F2F2F2;
+    color: #333333;
+    font: 14px Arial;
+}
+
+QPushButton {
+    background-color: #4F7299;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+    background-color: #6699CC;
+}
+
+QLineEdit {
+    background-color: #FFFFFF;
+    color: #333333;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QLabel {
+    color: #666666;
+    font: 14px Arial;
+}
+
+QCheckBox {
+    color: #333333;
+    font: 14px Arial;
+}
+
+QRadioButton {
+    color: #333333;
+    font: 14px Arial;
+}
+
+QComboBox {
+    background-color: #FFFFFF; 
+    color: #333333;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 5px;
+    font: 14px Arial;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: #CCCCCC;
+    border-left-style: solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+QComboBox::down-arrow {
+    image: url(down.png);
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF; 
+    color: #333333;
+    border: 1px solid #CCCCCC;
+    selection-background-color: #4F7299;
+    selection-color: #FFFFFF;
+    font: 14px Arial;
+}
+
+QProgressBar {
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+QProgressBar::chunk {
+    background-color: #4F7299;
+    border-radius: 5px;
+}
+
+QTableView {
+    border: 1px solid #CCCCCC;
+    font: 14px Arial;
+}
+
+QTableView QHeaderView::section {
+    background-color: #4F7299;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font: bold;
+}
+
+QTableView QHeaderView::section:hover {
+    background-color: #6699CC;
+}
+
+QTableView::item {
+    border: none;
+    padding: 5px;
+}
+
+QTableView::item:selected {
+    background-color: #4F7299;
+    color: #FFFFFF;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="styleSheet">
+         <string notr="true">/* Цветовая палитра */
+
+body {
+  background-color: #F5F5F5;
+}
+
+table {
+  background-color: #FFFFFF;
+}
+
+th {
+  background-color: #E0E0E0;
+}
+
+button {
+  background-color: #40739E;
+}
+
+input {
+  background-color: #E0E0E0;
+}
+
+/* Шрифты */
+
+h1 {
+  font-family: Arial;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+table, th, td {
+  font-family: Arial;
+  font-size: 12pt;
+}
+
+button {
+  font-family: Arial;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+input {
+  font-family: Arial;
+  font-size: 12pt;
+}
+
+/* Макет */
+
+#top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#table-container {
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+}
+
+#bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Детали дизайна */
+
+th {
+  text-align: center;
+  padding: 5px;
+}
+
+td {
+  padding: 5px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+}
+
+input {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Фамилия</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Имя</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_3"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Отчество</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_2"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Должность</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_4"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Звание</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_5"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Статус</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox">
+            <item>
+             <property name="text">
+              <string>Отсутствующие</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Находящиеся</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>В ожидании</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>Импорт Exel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Сохр. Exel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Сохр. Word</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Добавить</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="text">
+           <string>Изменить</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="text">
+           <string>Удалить</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
