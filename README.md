@@ -20,7 +20,7 @@ pyuic5 path/to/design.ui -o output/path/to/design.py
 ```
 Чтобы собрать проект:
 ```
-pyinstaller --onefile main.py
+pyinstaller -w --onefile main.py
 ```
 Папка с шаблонами должна располагаться рядом с exe файлом
 ## Работа с программой 
